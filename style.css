@@ -28,3 +28,12 @@ nav ul li a:hover {
     background-color: #006699;
     border-radius: 5px;
 }
+
+.center-image {
+    display: block;
+    margin: 20px auto;
+    max-width: 80%;
+    height: auto;
+    border: 4px solid #004466;
+    border-radius: 8px;
+}

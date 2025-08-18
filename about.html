@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - Sample Business</title>
+    <title>About</title>
     <link rel="stylesheet" href="assets/style.css">
 
     <!-- Load Montserrat for headings -->
@@ -17,17 +17,29 @@
         h1, h2, h3 {
             font-family: 'Montserrat', sans-serif;
         }
-        p {
+        p, li, span {
             font-family: 'Lora', serif;
         }
     </style>
 </head>
 <body>
 
+    <!-- Top Info Bar -->
+    <div class="top-bar">
+        <div class="top-bar-left">
+            <img src="img/Logo.webp" alt="Sample Business Logo" class="logo">
+        </div>
+        <div class="top-bar-right">
+            <img src="img/phone.jpg" alt="Phone Icon" class="phone-icon">
+            <span class="phone-number">123-456-7890</span>
+        </div>
+    </div>
+
+    <!-- Main Navigation -->
     <nav>
         <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
+            <li><a href="about.html" class="active">About</a></li>
             <li><a href="services.html">Services</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>

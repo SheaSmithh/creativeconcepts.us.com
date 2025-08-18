@@ -40,30 +40,41 @@ nav ul li a:hover {
 
 /* Top Bar */
 .top-bar {
-    background-color: lightblue;
+    background-color: #add8e6 !important; /* light blue */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 5px 20px;
+    padding: 15px 30px;
 }
-
 .top-bar-left .logo {
-    height: 40px; /* Adjust size as needed */
+    height: 60px;
+    width: auto;
 }
 
 .top-bar-right {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 12px;
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
+    font-size: 1.2rem;
 }
 
 .top-bar-right .phone-icon {
-    height: 20px; /* Small phone icon */
+    height: 32px;
     width: auto;
 }
 
 .phone-number {
     color: #000;
+}
+
+/* Shared container for consistent alignment */
+.container {
+    max-width: 1200px;   /* adjust for your design */
+    margin: 0 auto;      /* centers content */
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }

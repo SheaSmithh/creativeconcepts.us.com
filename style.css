@@ -115,16 +115,19 @@ nav ul li a:hover {
     color: #004466;
 }
 
-.before-after-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
+.before-after-row {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  margin-bottom: 40px;
+  flex-wrap: wrap; /* stacks on small screens */
 }
 
 .before, .after {
-    flex: 1;
-    min-width: 200px;
+  flex: 1 1 300px;
+  max-width: 400px;
+  text-align: center;
 }
 
 .before img, .after img {

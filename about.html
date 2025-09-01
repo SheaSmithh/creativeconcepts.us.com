@@ -20,6 +20,27 @@
         p, li, span {
             font-family: 'Lora', serif;
         }
+        .about-section {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+        .about-block {
+            background: #f9f9f9;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+        }
+        .about-block h2 {
+            margin-bottom: 1rem;
+        }
+        .about-block ul {
+            margin-top: 1rem;
+            padding-left: 1.5rem;
+        }
     </style>
 </head>
 <body>
@@ -50,33 +71,67 @@
     </header>
 
     <section class="about-section">
-        <!-- Textbox -->
-        <div class="about-textbox">
+        <!-- Our Story -->
+        <div class="about-block">
+            <h2>Our Story</h2>
             <p>
-                We are a dedicated team delivering high-quality services for our clients. 
-                With over a decade of experience, we bring both expertise and creativity 
-                to every project, ensuring our customers are always satisfied.
+                At <strong>Sample Painting & Contracting</strong>, we’ve been proudly serving our community for more than a decade. 
+                What began as a small family-owned painting crew has grown into a full-service contracting business offering 
+                painting, concrete, and electrical work for both residential and commercial clients. Over the years, we’ve built 
+                a reputation for reliability, professionalism, and high-quality craftsmanship. 
+            </p>
+            <p>
+                We understand that inviting a contractor into your home or business requires trust. That’s why we treat every 
+                project as if it were our own property — respecting your time, your space, and your investment. From the very 
+                first consultation to the finishing touches, we work closely with our clients to ensure that the end result not 
+                only meets but exceeds expectations. Our story is one of growth, dedication, and a passion for transforming 
+                ordinary spaces into something extraordinary.
             </p>
         </div>
-    
-        <!-- Before & After -->
-        <div class="before-after">
-            <h2>Our Work: Before & After</h2>
-            <div class="before-after-container">
-                <div class="before">
-                    <h3>Before</h3>
-                    <img src="img/Before1.jpg" alt="Before work photo">
-                </div>
-                <div class="after">
-                    <h3>After</h3>
-                    <img src="img/After1.jpg" alt="After work photo">
-                </div>
-            </div>
+
+        <!-- Our Mission -->
+        <div class="about-block">
+            <h2>Our Mission</h2>
+            <p>
+                Our mission is simple but powerful: to provide exceptional contracting services that bring lasting value to our 
+                clients. We believe that a freshly painted room can completely change the way you feel in a space, that properly 
+                poured concrete can transform the look and function of a yard, and that safe, reliable electrical work can give 
+                you peace of mind. Every service we provide is rooted in our belief that quality and integrity should always come 
+                first.
+            </p>
+            <p>
+                Beyond just the technical work, our mission is to create positive experiences. That means showing up on time, 
+                communicating clearly, offering fair and transparent pricing, and leaving every project site cleaner than we 
+                found it. We want our customers to feel confident choosing us again and again, knowing they are working with a 
+                team that genuinely cares about their satisfaction and the long-term success of their projects.
+            </p>
+        </div>
+
+        <!-- What We Do -->
+        <div class="about-block">
+            <h2>What We Do</h2>
+            <ul>
+                <li><strong>Interior & Exterior Painting</strong> – Clean, professional finishes for homes and businesses.</li>
+                <li><strong>Concrete Services</strong> – Driveways, patios, walkways, and decorative concrete work.</li>
+                <li><strong>Electrical Services</strong> – Safe, licensed installation and repair for residential and commercial needs.</li>
+                <li><strong>Drywall & Plaster Repair</strong> – Smooth, seamless walls ready for paint.</li>
+                <li><strong>Deck & Fence Staining</strong> – Protect and enhance your outdoor spaces.</li>
+                <li><strong>Custom Projects</strong> – Tailored solutions to bring your vision to life.</li>
+            </ul>
+        </div>
+
+        <!-- Our Promise -->
+        <div class="about-block">
+            <h2>Our Promise</h2>
+            <p>
+                No matter the size of the job, our experienced team brings professionalism, creativity, and a dedication to 
+                quality. Your satisfaction is our number one priority. We stand behind our work and won’t rest until you are 
+                completely happy with the results. Whether you’re hiring us for a small repair or a large renovation, you can 
+                trust us to deliver with care, respect, and craftsmanship that lasts.
+            </p>
         </div>
     </section>
     
-    
-
     <footer>
         <p>&copy; 2025 Sample Business. All rights reserved.</p>
     </footer>

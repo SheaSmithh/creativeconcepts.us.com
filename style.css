@@ -134,3 +134,36 @@ nav ul li a:hover {
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
+/* Service Areas Box */
+.service-areas {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 25px;
+    border: 2px solid #004466;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    text-align: left;
+}
+
+.service-areas h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+    color: #004466;
+    text-align: center;
+}
+
+.service-areas ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    font-family: 'Lora', serif;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: #333;
+
+    /* 3 columns */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px 30px;   /* row gap | column gap */
+}

@@ -1,3 +1,4 @@
+
 /* Navbar */
 nav {
     background-color: #004466;
@@ -192,4 +193,52 @@ nav ul li a:hover {
 }
 .copy-text:hover::after {
     opacity: 1;
+}
+
+/* Centered heading above both galleries */
+.galleries-title {
+    font-family: 'Montserrat', sans-serif;
+    color: #004466;
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 1.8rem;
+}
+
+/* Wrapper for both galleries */
+.galleries {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    margin: 0 auto 60px auto;
+    max-width: 1200px;
+    flex-wrap: wrap; /* stacks galleries on small screens */
+}
+
+/* Each gallery */
+.gallery {
+    flex: 1 1 500px; /* flexible width, min 500px */
+    text-align: center;
+}
+
+/* 2x2 grid inside each gallery */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2 columns */
+    gap: 20px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: auto;
+    border: 3px solid #004466;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* Responsive: stack galleries vertically on smaller screens */
+@media (max-width: 900px) {
+    .galleries {
+        flex-direction: column;
+        gap: 40px;
+    }
 }

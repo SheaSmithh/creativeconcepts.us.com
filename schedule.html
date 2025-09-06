@@ -17,7 +17,7 @@
         h1, h2, h3 {
             font-family: 'Montserrat', sans-serif;
         }
-        p, li, span, label, input, textarea, button {
+        p, li, span, label, input, textarea, button, select {
             font-family: 'Lora', serif;
         }
 
@@ -34,8 +34,15 @@
         .estimate-form h2 {
             font-family: 'Montserrat', sans-serif;
             color: #004466;
-            margin-bottom: 1rem;
+            margin-bottom: 0.5rem;
             text-align: center;
+        }
+
+        .required-note {
+            text-align: center;
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 1rem;
         }
 
         .estimate-form label {
@@ -44,8 +51,13 @@
             font-weight: bold;
         }
 
+        .estimate-form label span.required {
+            color: red;
+        }
+
         .estimate-form input,
         .estimate-form textarea,
+        .estimate-form select,
         .estimate-form button {
             width: 100%;
             padding: 0.5rem;
@@ -111,27 +123,38 @@
         <!-- Estimate Form -->
         <div class="estimate-form">
             <h2>Request Your Free Estimate</h2>
+            <p class="required-note">* indicates a required field</p>
             <form>
-                <label for="name">Full Name</label>
+                <label for="name">Full Name <span class="required">*</span></label>
                 <input id="name" name="name" type="text" required>
 
-                <label for="phone">Phone Number</label>
+                <label for="phone">Phone Number <span class="required">*</span></label>
                 <input id="phone" name="phone" type="tel" required>
 
-                <label for="email">Email Address</label>
+                <label for="email">Email Address <span class="required">*</span></label>
                 <input id="email" name="email" type="email" required>
 
-                <label for="zip">Zip Code</label>
+                <label for="zip">Zip Code <span class="required">*</span></label>
                 <input id="zip" name="zip" type="text" required>
 
-                <label for="date">Preferred Date</label>
+                <label for="date">Preferred Date <span class="required">*</span></label>
                 <input id="date" name="date" type="date" required>
 
-                <label for="time">Preferred Time</label>
+                <label for="time">Preferred Time <span class="required">*</span></label>
                 <input id="time" name="time" type="time" required>
 
-                <label for="details">Project Details</label>
-                <textarea id="details" name="details" placeholder="Tell us about your project..."></textarea>
+                <label for="details">Project Details <span class="required">*</span></label>
+                <textarea id="details" name="details" placeholder="Tell us about your project..." required></textarea>
+
+                <label for="referral">Where did you hear about us? <em>(Optional)</em></label>
+                <select id="referral" name="referral">
+                    <option value="">-- Please choose --</option>
+                    <option value="friend">Friend / Family</option>
+                    <option value="online">Online Search</option>
+                    <option value="social">Social Media</option>
+                    <option value="flyer">Flyer / Ad</option>
+                    <option value="other">Other</option>
+                </select>
 
                 <button type="submit">Submit Request</button>
             </form>

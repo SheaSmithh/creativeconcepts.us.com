@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule an Estimate</title>
+    <link rel="stylesheet" href="assets/style.css">
+
+    <!-- Load Montserrat for headings -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+
+    <!-- Load Lora for body text -->
+    <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+
+    <!-- Apply fonts globally -->
+    <style>
+        h1, h2, h3 {
+            font-family: 'Montserrat', sans-serif;
+        }
+        p, li, span, label, input, textarea, button {
+            font-family: 'Lora', serif;
+        }
+
+        .estimate-form {
+            max-width: 600px;
+            margin: 2rem auto;
+            padding: 1.5rem;
+            border: 2px solid #004466;
+            border-radius: 8px;
+            background: #fff;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .estimate-form h2 {
+            font-family: 'Montserrat', sans-serif;
+            color: #004466;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .estimate-form label {
+            display: block;
+            margin: 0.75rem 0 0.25rem;
+            font-weight: bold;
+        }
+
+        .estimate-form input,
+        .estimate-form textarea,
+        .estimate-form button {
+            width: 100%;
+            padding: 0.5rem;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            font-size: 1rem;
+        }
+
+        .estimate-form textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .estimate-form button {
+            margin-top: 1rem;
+            background-color: #006699;
+            color: white;
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .estimate-form button:hover {
+            background-color: #005577;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Info Bar -->
+    <div class="top-bar">
+        <div class="top-bar-left">
+            <img src="img/Logo.webp" alt="Sample Business Logo" class="logo">
+        </div>
+        <div class="top-bar-right">
+            <img src="img/phone.jpg" alt="Phone Icon" class="phone-icon">
+            <span class="phone-number copy-text" data-copy="815-345-9197">
+                815-345-9197
+            </span>
+        </div>  
+    </div>
+
+    <!-- Main Navigation -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="schedule.html" class="active">Schedule an Estimate</a></li>
+        </ul>
+    </nav>
+
+    <header class="title-bar">
+        <h1>Schedule an Estimate</h1>
+    </header>
+
+    <section class="content">
+        <p style="text-align:center;">
+            Fill out the form below and we’ll contact you to confirm your free painting estimate.
+        </p>
+
+        <!-- Estimate Form -->
+        <div class="estimate-form">
+            <h2>Request Your Free Estimate</h2>
+            <form>
+                <label for="name">Full Name</label>
+                <input id="name" name="name" type="text" required>
+
+                <label for="phone">Phone Number</label>
+                <input id="phone" name="phone" type="tel" required>
+
+                <label for="email">Email Address</label>
+                <input id="email" name="email" type="email" required>
+
+                <label for="zip">Zip Code</label>
+                <input id="zip" name="zip" type="text" required>
+
+                <label for="date">Preferred Date</label>
+                <input id="date" name="date" type="date" required>
+
+                <label for="time">Preferred Time</label>
+                <input id="time" name="time" type="time" required>
+
+                <label for="details">Project Details</label>
+                <textarea id="details" name="details" placeholder="Tell us about your project..."></textarea>
+
+                <button type="submit">Submit Request</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Creative Concepts. All rights reserved.</p>
+    </footer>
+
+    <script src="assets/copy-to-clipboard.js"></script>
+    <script>
+        // Example simple form handling
+        document.querySelector(".estimate-form form").addEventListener("submit", e => {
+            e.preventDefault();
+            alert("Thank you! Your estimate request has been submitted.");
+            e.target.reset();
+        });
+    </script>
+</body>
+</html>

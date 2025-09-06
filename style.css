@@ -170,3 +170,26 @@ nav ul li a:hover {
     grid-template-columns: repeat(3, 1fr);
     gap: 10px 30px;   /* row gap | column gap */
 }
+.copy-text {
+    cursor: pointer;
+    color: #000; /* black text */
+    position: relative;
+}
+
+.copy-text:hover {
+    text-decoration: underline; /* keeps underline on hover */
+    color: #000; /* stays black on hover */
+}
+.copy-text::after {
+    content: "Click to copy";
+    position: absolute;
+    bottom: -1.5rem;
+    left: 0;
+    font-size: 0.8rem;
+    color: #666;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.copy-text:hover::after {
+    opacity: 1;
+}

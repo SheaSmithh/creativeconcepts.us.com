@@ -1,3 +1,4 @@
+
 /* =========================
    NAVBAR
 ========================= */
@@ -290,6 +291,10 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 38px;
 }
 
+h2 {
+    text-align: center;
+}
+
 /* Make all sections have 24px text */
 section {
     font-size: 24px;
@@ -347,4 +352,3 @@ section {
     flex: 1;
     background: url("img/StairsD.jpg") no-repeat center center/cover;
 }
-  

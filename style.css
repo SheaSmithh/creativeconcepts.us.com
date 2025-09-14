@@ -1,21 +1,22 @@
-
-/* Navbar */
+/* =========================
+   NAVBAR
+========================= */
 nav {
     background-color: #004466;
     padding: 1rem 0;
 }
 
 nav ul {
-    display: flex;            /* Makes items go side-by-side */
-    justify-content: center;  /* Centers the items horizontally */
-    align-items: center;      /* Vertically centers them */
-    list-style: none;         /* Removes bullets */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
     margin: 0;
     padding: 0;
 }
 
 nav ul li {
-    margin: 0 15px;           /* Space between links */
+    margin: 0 15px;
 }
 
 nav ul li a {
@@ -30,6 +31,79 @@ nav ul li a:hover {
     border-radius: 5px;
 }
 
+/* =========================
+   TOP BAR
+========================= */
+.top-bar {
+    background-color: #add8e6 !important; /* light blue */
+    display: flex;
+    align-items: center;
+    padding: 15px 30px;
+    position: relative; /* allows center block to be absolutely centered */
+}
+
+.top-bar-left .logo {
+    height: 60px;
+    width: auto;
+}
+
+/* Centered phone block */
+.top-bar-center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.call-text {
+    font-size: 1.8rem;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    color: #222;
+    text-transform: uppercase;
+}
+
+.phone-icon {
+    width: 28px;
+    height: auto;
+}
+
+.phone-number {
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.copy-text {
+    cursor: pointer;
+    color: #000;
+    position: relative;
+}
+
+.copy-text:hover {
+    text-decoration: underline;
+    color: #000;
+}
+
+.copy-text::after {
+    content: "Click to copy";
+    position: absolute;
+    bottom: -1.5rem;
+    left: 0;
+    font-size: 0.8rem;
+    color: #666;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.copy-text:hover::after {
+    opacity: 1;
+}
+
+/* =========================
+   MAIN CONTENT
+========================= */
 .center-image {
     display: block;
     margin: 20px auto;
@@ -39,52 +113,21 @@ nav ul li a:hover {
     border-radius: 8px;
 }
 
-/* Top Bar */
-.top-bar {
-    background-color: #add8e6 !important; /* light blue */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 30px;
-}
-.top-bar-left .logo {
-    height: 60px;
-    width: auto;
-}
-
-.top-bar-right {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: bold;
-    font-size: 1.2rem;
-}
-
-.top-bar-right .phone-icon {
-    height: 32px;
-    width: auto;
-}
-
-.phone-number {
-    color: #000;
-}
-
-/* Shared container for consistent alignment */
+/* Shared container */
 .container {
-    max-width: 1200px;   /* adjust for your design */
-    margin: 0 auto;      /* centers content */
+    max-width: 1200px;
+    margin: 0 auto;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-/* Wrapper to align textbox & images side by side */
+/* About section */
 .about-section {
     display: flex;
     justify-content: space-between;
-    align-items: center;   /* <-- center them vertically */
+    align-items: center;
     gap: 40px;
     margin: 60px 0;
     max-width: 100%;
@@ -102,7 +145,6 @@ nav ul li a:hover {
     box-shadow: 0 3px 6px rgba(0,0,0,0.1);
 }
 
-/* Before & After on the right */
 .before-after {
     order: 1;
     flex: 1;
@@ -117,18 +159,18 @@ nav ul li a:hover {
 }
 
 .before-after-row {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 40px;
-  margin-bottom: 40px;
-  flex-wrap: wrap; /* stacks on small screens */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    margin-bottom: 40px;
+    flex-wrap: wrap; /* stacks on small screens */
 }
 
 .before, .after {
-  flex: 1 1 300px;
-  max-width: 400px;
-  text-align: center;
+    flex: 1 1 300px;
+    max-width: 400px;
+    text-align: center;
 }
 
 .before img, .after img {
@@ -138,7 +180,10 @@ nav ul li a:hover {
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
-/* Service Areas Box */
+
+/* =========================
+   SERVICE AREAS
+========================= */
 .service-areas {
     max-width: 800px;
     margin: 40px auto;
@@ -166,36 +211,14 @@ nav ul li a:hover {
     line-height: 1.6;
     color: #333;
 
-    /* 3 columns */
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 10px 30px;   /* row gap | column gap */
-}
-.copy-text {
-    cursor: pointer;
-    color: #000; /* black text */
-    position: relative;
+    gap: 10px 30px;
 }
 
-.copy-text:hover {
-    text-decoration: underline; /* keeps underline on hover */
-    color: #000; /* stays black on hover */
-}
-.copy-text::after {
-    content: "Click to copy";
-    position: absolute;
-    bottom: -1.5rem;
-    left: 0;
-    font-size: 0.8rem;
-    color: #666;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-.copy-text:hover::after {
-    opacity: 1;
-}
-
-/* Centered heading above both galleries */
+/* =========================
+   GALLERIES
+========================= */
 .galleries-title {
     font-family: 'Montserrat', sans-serif;
     color: #004466;
@@ -204,26 +227,23 @@ nav ul li a:hover {
     font-size: 1.8rem;
 }
 
-/* Wrapper for both galleries */
 .galleries {
     display: flex;
     justify-content: space-between;
     gap: 40px;
     margin: 0 auto 60px auto;
     max-width: 1200px;
-    flex-wrap: wrap; /* stacks galleries on small screens */
+    flex-wrap: wrap;
 }
 
-/* Each gallery */
 .gallery {
-    flex: 1 1 500px; /* flexible width, min 500px */
+    flex: 1 1 500px;
     text-align: center;
 }
 
-/* 2x2 grid inside each gallery */
 .gallery-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* 2 columns */
+    grid-template-columns: 1fr 1fr;
     gap: 20px;
 }
 
@@ -241,4 +261,21 @@ nav ul li a:hover {
         flex-direction: column;
         gap: 40px;
     }
+}
+.estimate-btn {
+    background-color: #004466;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    padding: 10px 18px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-size: 1rem;
+    margin-left: 15px;
+}
+
+.estimate-btn:hover {
+    background-color: #006699;
+    transform: scale(1.05);
 }

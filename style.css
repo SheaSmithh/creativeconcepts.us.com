@@ -279,3 +279,14 @@ nav ul li a:hover {
     background-color: #006699;
     transform: scale(1.05);
 }
+
+/* Set the sizes for the headers and section text */
+/* Make all headers the same size */
+h1, h2, h3, h4, h5, h6 {
+    font-size: 38px;
+}
+
+/* Make all sections have 24px text */
+section {
+    font-size: 24px;
+}

@@ -38,14 +38,18 @@ nav ul li a:hover {
     background-color: #add8e6 !important; /* light blue */
     display: flex;
     align-items: center;
-    padding: 15px 30px;
-    position: relative; /* allows center block to be absolutely centered */
+    padding: 0 30px;   /* remove vertical padding, only side padding */
+    height: 150px;     /* lock the height */
+    position: relative;
+    overflow: hidden;  /* keep contents from stretching it */
 }
 
 .top-bar-left .logo {
-    height: 60px;
-    width: auto;
+    height: 250px;      /* scale inside the bar */
+    width: 250px;       /* keep proportions */
+    object-fit: contain; /* makes sure it doesn’t distort */
 }
+
 
 /* Centered phone block */
 .top-bar-center {
@@ -290,3 +294,57 @@ h1, h2, h3, h4, h5, h6 {
 section {
     font-size: 24px;
 }
+
+.hero-section {
+    display: flex;
+    height: 800px; /* instead of 400px */
+    width: 100%;
+}
+  
+  
+.hero-overlay {
+    flex: 1;
+    background: #004466; /* same blue as navbar */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+  
+.hero-text {
+    color: #fff;
+    max-width: 500px;
+}
+  
+.hero-text h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+  
+.hero-text p {
+    font-family: 'Lora', serif;
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+}
+  
+.hero-btn {
+    background: #0044cc;
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+  
+.hero-btn:hover {
+    background: #002a80;
+}
+  
+.hero-image {
+    flex: 1;
+    background: url("img/StairsD.jpg") no-repeat center center/cover;
+}
+  

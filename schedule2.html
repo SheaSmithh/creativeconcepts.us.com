@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Schedule an Estimate</title>
+  <link rel="stylesheet" href="assets/style.css">
+
+  <!-- Load Montserrat for headings -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+
+  <!-- Load Lora for body text -->
+  <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+
+  <!-- Apply fonts globally -->
+  <style>
+    h1, h2, h3 {
+      font-family: 'Montserrat', sans-serif;
+    }
+    p, li, span, label, input, textarea, button, select {
+      font-family: 'Lora', serif;
+    }
+
+    /* Layout for form + why-choose */
+    .estimate-layout {
+      display: grid;
+      grid-template-columns: 1fr auto; /* form takes available space, why-choose hugs right */
+      gap: 2rem;
+      justify-content: center;
+      margin: 2rem auto;
+      max-width: 1100px;
+    }
+
+    .estimate-form {
+      max-width: 600px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 1.5rem;
+      border: 2px solid #004466;
+      border-radius: 8px;
+      background: #fff;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .estimate-form h2 {
+      font-family: 'Montserrat', sans-serif;
+      color: #004466;
+      margin-bottom: 0.5rem;
+      text-align: center;
+    }
+
+    .required-note {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+
+    .estimate-form label {
+      display: block;
+      margin: 0.75rem 0 0.25rem;
+      font-weight: bold;
+    }
+
+    .estimate-form label span.required {
+      color: red;
+    }
+
+    .estimate-form input,
+    .estimate-form select,
+    .estimate-form button {
+      width: 100%;
+      padding: 0.5rem;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+
+    .estimate-form button {
+      margin-top: 1rem;
+      background-color: #006699;
+      color: white;
+      border: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .estimate-form button:hover {
+      background-color: #005577;
+    }
+
+    /* Why Choose box */
+    .why-choose {
+      max-width: 280px;
+      background: #f8f9fa;
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .why-choose h2 {
+      font-family: 'Montserrat', sans-serif;
+      color: #004466;
+      margin: 1rem 0;
+    }
+
+    .why-choose ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .why-choose li {
+      margin: 0.5rem 0;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .why-img {
+      max-width: 100%;
+      border-radius: 6px;
+    }
+
+    /* Mobile: stack form above box */
+    @media (max-width: 900px) {
+      .estimate-layout {
+        grid-template-columns: 1fr;
+      }
+      .why-choose {
+        margin-top: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Info Bar -->
+  <div class="top-bar">
+    <div class="top-bar-left">
+        <img src="img/CreativeConcepts.png" alt="Sample Business Logo" class="logo">
+    </div>
+
+    <div class="top-bar-center">
+        <span class="call-text">Call Us Today</span>
+        <img src="img/phone.jpg" alt="Phone Icon" class="phone-icon">
+        <span class="phone-number copy-text" data-copy="815-345-9197">
+            815-345-9197
+        </span>
+        <a href="schedule.html" class="estimate-btn">Schedule a Free Estimate</a>
+    </div>        
+</div>
+
+  <!-- Main Navigation -->
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="schedule.html" class="active">Schedule an Estimate</a></li>
+    </ul>
+  </nav>
+
+  <header class="title-bar">
+    <h1>Schedule an Estimate</h1>
+  </header>
+
+  <section class="estimate-layout">
+    <!-- Form (centered) -->
+    <div class="estimate-form">
+      <h2>Request Your Free Estimate</h2>
+      <p class="required-note">* indicates a required field</p>
+      <form>
+        <label for="name">Full Name <span class="required">*</span></label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email <span class="required">*</span></label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">Phone <span class="required">*</span></label>
+        <input type="tel" id="phone" name="phone" required>
+
+        <label for="service">Service Needed <span class="required">*</span></label>
+        <select id="service" name="service" required>
+          <option value="">Select one</option>
+          <option value="interior">Interior Painting</option>
+          <option value="exterior">Exterior Painting</option>
+          <option value="commercial">Commercial Painting</option>
+          <option value="cabinet">Cabinet Refinishing</option>
+        </select>
+
+        <label for="hear">Where did you hear about us? <em>(Optional)</em></label>
+        <input type="text" id="hear" name="hear">
+
+        <button type="submit">Submit Request</button>
+      </form>
+    </div>
+
+    <!-- Why Choose (right) -->
+    <div class="why-choose">
+      <img src="img/FloorD.jpg" alt="Creative Concepts Painting" class="why-img">
+      <h2>Why Choose Creative Concepts?</h2>
+      <ul>
+        <li>Professional Expertise</li>
+        <li>Superior Quality</li>
+        <li>Clean Work Areas</li>
+        <li>On-Time Service</li>
+        <li>On Budget</li>
+      </ul>
+    </div>
+  </section>     
+
+  <footer>
+    <p>&copy; 2025 Creative Concepts. All rights reserved.</p>
+  </footer>
+
+  <script src="assets/copy-to-clipboard.js"></script>
+  <script>
+    // Example simple form handling
+    document.querySelector(".estimate-form form").addEventListener("submit", e => {
+      e.preventDefault();
+      alert("Thank you! Your estimate request has been submitted.");
+      e.target.reset();
+    });
+  </script>
+</body>
+</html>

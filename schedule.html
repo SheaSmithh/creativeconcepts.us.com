@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <link rel="icon" type="image/png" href="img/CreativeConcepts.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Schedule an Estimate</title>
   <link rel="stylesheet" href="assets/style.css">
@@ -34,7 +33,6 @@
 
     .estimate-form {
       max-width: 600px;
-      max-height: 220px;
       width: 100%;
       margin: 0 auto;
       padding: 1.5rem;
@@ -140,7 +138,7 @@
   <!-- Top Info Bar -->
   <div class="top-bar">
     <div class="top-bar-left">
-        <img src="img/CreativeConcepts.png" alt="Sample Business Logo" class="logo">
+        <img src="img/Creative concepts2.jpg" alt="Sample Business Logo" class="logo">
     </div>
 
     <div class="top-bar-center">
@@ -171,13 +169,37 @@
   <section class="estimate-layout">
     <!-- Form (centered) -->
     <div class="estimate-form">
-    <h2>Request Your Free Estimate</h2>
-    <p class="required-note">Online form submission coming soon. For now, please just give us a call:</p>
-    <h3 style="text-align:center; color:#006699; margin-top:1rem;">
-      Mike Smith at <span class="phone-number copy-text" data-copy="815-345-9197">
-        815-345-9197
-    </span>
-    </h3>
+      <h2>Request Your Free Estimate</h2>
+      <p class="required-note">* indicates a required field</p>
+<!--      <form method="POST" action="https://67hjw4mydncxyiust3ogrd6pee0nsaih.lambda-url.us-east-1.on.aws/" content-type="application/x-www-form-urlencoded">  -->
+      <form method="POST" action="https://67hjw4mydncxyiust3ogrd6pee0nsaih.lambda-url.us-east-1.on.aws/">
+        <label for="name">Full Name <span class="required">*</span></label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email <span class="required">*</span></label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">phone-number</label>
+        <input type="tel" id="phone" name="phone" required>
+
+        <label for="service">Service Needed</label>
+        <select id="service" name="service" required>
+          <option value="">Select one</option>
+          <option value="interior-painting">Interior Painting</option>
+          <option value="exterior-painting">Exterior Painting</option>
+          <option value="commercial-painting">Commercial Painting</option>
+          <option value="cabinet-refinishing">Cabinet Refinishing</option>
+          <option value="hardwood-flooring">Hardwood Flooring</option>
+        </select>
+
+        <label for="hear">Where did you hear about us?</label>
+        <input type="text" id="hear" name="hear">
+
+        <label for="customerMessage">Message </label>
+        <textarea name="customerMessage" rows="10"></textarea>
+
+        <button type="submit">Submit Request</button>
+      </form>
     </div>
 
     <!-- Why Choose (right) -->
@@ -200,12 +222,35 @@
 
   <script src="assets/copy-to-clipboard.js"></script>
   <script>
-    // Example simple form handling
-    document.querySelector(".estimate-form form").addEventListener("submit", e => {
-      e.preventDefault();
-      alert("Thank you! Your estimate request has been submitted.");
-      e.target.reset();
-    });
+  document.querySelector(".estimate-form form").addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const form = e.target;
+    const data = new FormData(form);
+    console.log("Form data:", JSON.stringify(Object.fromEntries(data.entries())));
+
+    try {
+      const response = await fetch(form.action, {
+        method: "POST",
+        mode: 'cors',  
+        headers: {
+          "Content-Type": "application/json"
+        },        
+        body: JSON.stringify(Object.fromEntries(data.entries()))
+      });
+
+      if (response.ok) {
+        alert("Thank you! Your estimate request has been submitted.");
+        form.reset();
+      } else {
+        alert("Submission failed. Please try again later.");
+      }
+    } catch (error) {
+      alert("Error sending request. Please try again.");
+      console.error(error);
+    }
+  });
   </script>
+
 </body>
 </html>

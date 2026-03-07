@@ -47,8 +47,8 @@ nav ul li a:hover {
 }
 
 .top-bar-left .logo {
-    height: 250px;
-    width: 250px;
+    height: 125px;
+    width: 370px;
     object-fit: contain;
 }
 
@@ -342,6 +342,21 @@ section {
 }
 
 /* =========================
+   Add Message Width corrections
+========================= */
+
+.estimate-form input,
+.estimate-form select,
+.estimate-form textarea,
+.estimate-form button {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+/* =========================
    RESPONSIVE STYLES
 ========================= */
 
@@ -356,8 +371,8 @@ section {
     }
 
     .top-bar-left .logo {
-        height: 150px;
-        width: 150px;
+        height: 95px;
+        width: 280px;
     }
 
     .top-bar-center {
@@ -414,8 +429,8 @@ section {
     }
 
     .top-bar-left .logo {
-        height: 120px;
-        width: 120px;
+        height: 95px;
+        width: 280px;
     }
 
     .call-text {
@@ -517,8 +532,8 @@ section {
 /* Small mobile screens */
 @media (max-width: 480px) {
     .top-bar-left .logo {
-        height: 100px;
-        width: 100px;
+        height: 95px;
+        width: 280px;
     }
 
     .call-text {

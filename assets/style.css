@@ -52,6 +52,15 @@ nav ul li a:hover {
     object-fit: contain;
 }
 
+.top-bar-right {
+    margin-left: auto;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #004466;
+    white-space: nowrap;
+}
+
 .top-bar-center {
     position: absolute;
     left: 50%;
